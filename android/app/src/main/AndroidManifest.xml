@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/> <!-- For API 33+ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> <!-- For API < 33 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/> <!-- If targeting Android 33+ and using foreground services for upload progress -->
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- For network uploads -->
     <application
         android:label="reps_trainer_app"
         android:name="${applicationName}"

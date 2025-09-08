@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reps_trainer_app/utils/colors.dart';
+import 'package:reps_trainer_app/views/playbook/playbook.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,8 @@ class BottomNavScreen extends StatelessWidget {
   final List<Widget> _pages = [
     Center(child: Text('Dashboard', style: TextStyle(color: textColor),)),
     Center(child: Text('Stats', style: TextStyle(color: textColor),)),
-    Center(child: Text('Plans', style: TextStyle(color: textColor),)),
+    //Center(child: Text('Plans', style: TextStyle(color: textColor),)),
+    PlaybookScreen(),
     Center(child: Text('Players', style: TextStyle(color: textColor),)),
     Center(child: Text('Profile', style: TextStyle(color: textColor),)),
   ];
