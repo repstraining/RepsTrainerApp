@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:reps_trainer_app/controllers/bottom_nav_controller.dart';
 import 'package:reps_trainer_app/utils/colors.dart';
+import 'package:reps_trainer_app/views/authentication/login.dart';
+import 'package:reps_trainer_app/views/authentication/registration.dart';
 import 'package:reps_trainer_app/views/playbook/playbook.dart';
 
 void main() {
@@ -13,23 +16,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
      
-      home: BottomNavScreen(),
+     home: const Registration(),
       getPages: [
-        // other screens navigation
+        GetPage(
+          name: '/registration',
+          page: () => const Registration(),
+          transition: Transition.fade,
+        ),
+        GetPage(
+          name: '/login',
+          page: () => const Login(),
+          transition: Transition.fade,
+        ),
+        
       ],
     );
   }
 }
 
-class BottomNavController extends GetxController {
-  var selectedIndex = 0.obs;
 
-
-  void changeIndex(int index) {
-    selectedIndex.value = index;
-  }
-}
 
 class BottomNavScreen extends StatelessWidget {
   final List<Widget> _pages = [
