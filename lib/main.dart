@@ -1,12 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reps_trainer_app/controllers/bottom_nav_controller.dart';
+import 'package:reps_trainer_app/firebase_options.dart';
 import 'package:reps_trainer_app/utils/colors.dart';
 import 'package:reps_trainer_app/views/authentication/login.dart';
 import 'package:reps_trainer_app/views/authentication/registration.dart';
+import 'package:reps_trainer_app/views/playbook/drills/create_new_drill.dart';
 import 'package:reps_trainer_app/views/playbook/playbook.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -28,6 +35,16 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/login',
           page: () => const Login(),
+          transition: Transition.fade,
+        ),
+        GetPage(
+          name: '/bottomNav',
+          page: () =>  BottomNavScreen(),
+          transition: Transition.fade,
+        ),
+        GetPage(
+          name: '/createDrill',
+          page: () =>  CreateNewDrillScreen(),
           transition: Transition.fade,
         ),
         

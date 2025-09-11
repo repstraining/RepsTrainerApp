@@ -1,3 +1,4 @@
 {
-    "dart.flutterSdkPath": "/Users/sharonleah/flutterApps/dreamslip_ascent/.fvm/versions/3.24.5"
+    "dart.flutterSdkPath": "/Users/sharonleah/flutterApps/dreamslip_ascent/.fvm/versions/3.24.5",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

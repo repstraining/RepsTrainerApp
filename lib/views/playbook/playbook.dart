@@ -29,7 +29,7 @@ class _PlaybookScreenState extends State<PlaybookScreen> {
         centerTitle: false,
         actions: [
            IconButton(
-              icon: const Icon(Icons.add_circle, color: Colors.purple),
+              icon: const Icon(Icons.add_circle, color: primaryColor),
               onPressed: controller.createItem,
             
           ),
@@ -81,10 +81,11 @@ class _PlaybookScreenState extends State<PlaybookScreen> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(topLeft: Radius.circular(10),bottomLeft: Radius.circular(10),),
                                 color: controller.selectedTab.value == 0
-                              ? Colors.grey[200]
+                              ? primaryColor
                               : null,
                               ),
-                          child: Center(child: Text('Plans', style: TextStyle(color: primaryColor),)),
+                          child: Center(child: Text('Plans', style: TextStyle(color: controller.selectedTab.value == 0
+                              ? Colors.white: primaryColor, fontWeight: FontWeight.bold),)),
                         ),
                       ),
                     ),
@@ -101,13 +102,14 @@ class _PlaybookScreenState extends State<PlaybookScreen> {
                           decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(topRight: Radius.circular(10),bottomRight: Radius.circular(10),),
                                 color: controller.selectedTab.value == 1
-                              ? Colors.grey[200]
+                              ? primaryColor
                               : null,
                               ),
-                          child: Center(child: Text('Drills',style: TextStyle(color: primaryColor),)),
+                          child: Center(child: Text('Drills',style: TextStyle(color: controller.selectedTab.value == 1
+                              ? Colors.white: primaryColor, fontWeight: FontWeight.bold)),
                         ),
                       ),
-                    ),
+                    ),),
                   ],
                 ),
               ),

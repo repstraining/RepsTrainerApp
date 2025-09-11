@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "155591398601",
+    "project_id": "reps-53098",
+    "storage_bucket": "reps-53098.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155591398601:android:0a4d14bb2fefb9addf6918",
+        "android_client_info": {
+          "package_name": "com.example.reps_trainer_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEw5TrgIkfMy6J_YsynK-AUxivO47JpZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155591398601:android:6d3e5422c65d8d5bdf6918",
+        "android_client_info": {
+          "package_name": "com.repstraining.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEw5TrgIkfMy6J_YsynK-AUxivO47JpZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -15,11 +15,12 @@ class PlaybookController extends GetxController {
     if (itemType == 'Plan') {
       Get.snackbar('Creating', 'Creating a new Plan... (Implement Plan creation dialog here)');
     } else {
-      showCreateDrillDialog();
+      Get.toNamed('/createDrill');
+      //showCreateDrillDialog();
     }
   }
 
-  void showCreateDrillDialog() {
-    Get.dialog(const CreateDrillDialog());
-  }
+  // void showCreateDrillDialog() {
+  //   Get.dialog(const CreateDrillDialog());
+  // }
 }
